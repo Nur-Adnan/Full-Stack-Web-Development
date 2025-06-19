@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* General Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Link Styling */
+
+a {
+  color: #4daafc;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #1b90f5;
+  transition: 0.2s ease-in-out;
+}
+
+/* Navbar Styling */
+
+.navbar {
+  height: 60px;
+  margin: 0 auto;
+  padding: 0px 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-bottom: 0.5px solid rgb(74, 73, 73);
+  background-color: #0e0e0e;
+}
+
+.navbar .leftNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar .leftNav .logo {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #e9eaeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar .leftNav .logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.navbar .leftNav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar .leftNav ul li a {
+  text-decoration: none;
+  color: #9ba3b4;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar .leftNav ul li a:hover {
+  color: #e9eaeb;
+}
+
+.navbar .rightNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .rightNav .lightMode {
+  cursor: pointer;
+}
+
+.navbar .rightNav .lightMode:hover {
+  background-color: rgb(44, 44, 44);
+  border-radius: 20%;
+}
+
+.navbar .rightNav .inputBox {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 0.1px solid #5a5a5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.5;
+}
+
+.navbar .rightNav .inputBox i {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .rightNav .inputBox input {
+  border: none;
+  outline: none;
+  background-color: #0e0e0e;
+  font-size: 15px;
+  width: 150px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.navbar .rightNav .inputBox:focus-within {
+  border: 1px solid #0069b9;
+}
+
+.navbar .rightNav button {
+  color: #e9eaeb;
+  font-weight: bold;
+  background-color: #0069b9;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar .rightNav button:hover {
+  background-color: #005da3;
+  transition: 0.2s ease-in-out;
+}
