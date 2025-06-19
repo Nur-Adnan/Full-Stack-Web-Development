@@ -32,7 +32,7 @@ a:hover {
 .navbar {
   height: 60px;
   margin: 0 auto;
-  padding: 0px 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 2rem;
 }
 
 .navbar .leftNav .logo {
@@ -61,7 +61,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .navbar .leftNav .logo img {
@@ -73,7 +73,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.5rem;
   list-style: none;
 }
 
@@ -92,7 +92,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1.5rem;
 }
 
 .navbar .rightNav .lightMode {
@@ -101,7 +101,9 @@ a:hover {
 
 .navbar .rightNav .lightMode:hover {
   background-color: rgb(44, 44, 44);
-  border-radius: 20%;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  transition: 0.5s ease-in-out;
 }
 
 .navbar .rightNav .inputBox {
@@ -111,7 +113,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   opacity: 0.5;
 }
 
@@ -125,7 +127,7 @@ a:hover {
   outline: none;
   background-color: #0e0e0e;
   font-size: 15px;
-  width: 150px;
+  width: 10rem;
 }
 
 ::placeholder {
@@ -145,6 +147,7 @@ a:hover {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  width: 8rem;
 }
 
 .navbar .rightNav button:hover {
