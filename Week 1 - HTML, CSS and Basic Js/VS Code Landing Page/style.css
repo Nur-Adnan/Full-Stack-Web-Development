@@ -154,3 +154,75 @@ a:hover {
   background-color: #005da3;
   transition: 0.2s ease-in-out;
 }
+
+/* Version section styling */
+.version {
+  margin-top: 6rem;
+  text-align: center;
+  color: #c5c5c5;
+}
+
+/* hero section1 styling */
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 60px 5% 100px 5%;
+  border-bottom: 0.5px solid rgb(74, 73, 73);
+  background: linear-gradient(to bottom, #0e0e0e 70%, #151515 100%);
+}
+
+.section .leftSection {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section .leftSection div {
+  border: 0.1px solid rgb(36, 36, 36);
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  opacity: 0.7;
+  background-color: #242424;
+}
+
+.section .leftSection h2 {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(240, 240, 240);
+}
+
+.section .leftSection button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0069b9;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.section .leftSection button:hover {
+  background-color: #005da3;
+}
+
+.section .leftSection span {
+  color: rgb(144, 143, 143);
+}
+
+.section .leftSection span + span {
+  font-size: 12px;
+}
+
+.section .rightSection {
+  width: 60%;
+}
+
+.section .rightSection img {
+  width: 100%;
+}
