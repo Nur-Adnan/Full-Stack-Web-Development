@@ -68,3 +68,13 @@ let user = {
 console.log(user.name);
 console.log(user["age"]);
 
+// array of object
+
+let countries = [
+  "Bangladesh",
+  {
+    city: ["Dhaka", "Chittagong", "Syhlet"],
+  },
+];
+
+console.log(countries[1].city[0]);
