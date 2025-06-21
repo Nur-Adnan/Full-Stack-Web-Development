@@ -78,3 +78,26 @@ let countries = [
 ];
 
 console.log(countries[1].city[0]);
+
+// create a function that takes an array of objects as input,
+// and return the users whose age > 18 and also they are male
+
+const users = [
+  { name: "John", age: 25, gender: "male" },
+  { name: "Alice", age: 17, gender: "female" },
+  { name: "Bob", age: 20, gender: "male" },
+  { name: "Emma", age: 22, gender: "female" },
+  { name: "Tom", age: 16, gender: "male" },
+];
+
+function sorted(arr) {
+  let users = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].age > 18 && arr[i].gender === "male") {
+      users.push(arr[i]);
+    }
+  }
+  return users;
+}
+
+console.log(sorted(users));
