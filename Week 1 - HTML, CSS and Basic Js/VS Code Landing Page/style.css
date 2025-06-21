@@ -166,9 +166,11 @@ a:hover {
 .section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 5rem;
-  padding: 60px 5% 100px 5%;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
   border-bottom: 0.5px solid rgb(74, 73, 73);
   background: linear-gradient(to bottom, #0e0e0e 70%, #151515 100%);
 }
@@ -176,14 +178,14 @@ a:hover {
 .section .leftSection {
   display: flex;
   justify-content: center;
-  align-items: start;
   flex-direction: column;
   gap: 20px;
+  padding-left: 15rem;
 }
 
 .section .leftSection div {
   border: 0.1px solid rgb(36, 36, 36);
-  padding: 8px 15px;
+  padding: 5px 15px;
   border-radius: 20px;
   color: white;
   opacity: 0.7;
@@ -197,7 +199,7 @@ a:hover {
 }
 
 .section .leftSection button {
-  padding: 15px 25px;
+  padding: 15px 20px;
   border: none;
   border-radius: 5px;
   background-color: #0069b9;
@@ -205,6 +207,7 @@ a:hover {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  width: 15rem;
 }
 
 .section .leftSection button:hover {
@@ -221,8 +224,9 @@ a:hover {
 
 .section .rightSection {
   width: 60%;
+  padding-left: 2rem;
 }
 
 .section .rightSection img {
-  width: 100%;
+  width: 80%;
 }
