@@ -32,7 +32,7 @@ a:hover {
 .navbar {
   height: 60px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
