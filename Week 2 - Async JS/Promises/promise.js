@@ -68,3 +68,30 @@ function callBack(contents) {
 }
 
 q.then(callBack);
+
+// make the promise more simple
+
+console.log("-------- Top of the file --------");
+
+function readTheFile(resolve) {
+  console.log("readTheFile called");
+  setTimeout(function () {
+    console.log("callback based setTimeout completed");
+    resolve();
+  }, 3000);
+}
+
+function setTimeoutPromisified(fileName) {
+  console.log("setTimeoutPromisified called");
+  return new Promise(readTheFile);
+}
+
+const w = setTimeoutPromisified();
+
+function callback() {
+  console.log("Time is Done");
+}
+
+w.then(callback);
+
+console.log("---------------- end of the file ------------");
