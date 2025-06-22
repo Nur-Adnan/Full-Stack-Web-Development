@@ -95,3 +95,35 @@ function callback() {
 w.then(callback);
 
 console.log("---------------- end of the file ------------");
+
+// promise class
+
+class adnanPromise {
+  constructor(fn) {
+    this.fn = fn;
+    this.fn(() => {
+      this.resolve();
+    });
+  }
+  then(callback) {
+    this.resolve = callback;
+  }
+}
+
+function readTheFile(resolve) {
+  setTimeout(function () {
+    resolve();
+  }, 3000);
+}
+
+function setTimeoutAdnanPromisified() {
+  return new adnanPromise(readTheFile);
+}
+
+const x = setTimeoutAdnanPromisified();
+
+function adnanBack() {
+  console.log("Time is Done");
+}
+
+x.then(adnanBack);
