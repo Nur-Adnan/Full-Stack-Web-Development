@@ -32,3 +32,21 @@ function callback() {
 
 const p = setTimeoutPromisified(5000);
 p.then(callback);
+
+// another way to understand promise
+
+function promiseFn(resolve) {
+  let c = 0;
+  for (let i = 0; i < 10000000; i++) {
+    c++;
+  }
+  resolve();
+}
+
+const q = new Promise(promiseFn);
+
+function callback() {
+  console.log("Hi There!");
+}
+
+q.then(callback);
