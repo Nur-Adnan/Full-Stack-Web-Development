@@ -1,3 +1,4 @@
+const fs = require("fs");
 /* 
     function logName() {
     console.log("Adnan");
@@ -46,3 +47,24 @@ function callback() {
 }
 
 p.then(callback);
+
+// Promisified version of fs.readFile
+
+function readTheFile(sendTheFinalValue) {
+  fs.readFile("a.txt", "utf-8", function (err, data) {
+    sendTheFinalValue(data);
+  });
+}
+
+function readFile(fileName) {
+  // read the file and return it's value
+  return new Promise(readTheFile);
+}
+
+const q = readFile("a.txt");
+
+function callBack(contents) {
+  console.log(contents);
+}
+
+q.then(callBack);
