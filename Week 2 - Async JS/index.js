@@ -3,6 +3,21 @@ const fs = require("fs");
 const content = fs.readFileSync("a.txt", "utf-8");
 console.log(content);
 
+// using callback
+
+function print(err, data) {
+  if (err) {
+    console.log("File doesn't exit");
+  } else {
+    console.log(data);
+  }
+}
+
+fs.readFile("a.txt", "utf-8", print); // async
+fs.readFile("b.txt", "utf-8", print); // async
+
+console.log("Done !");
+
 // find the sum from 1 to a number
 
 function sum(n) {
