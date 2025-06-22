@@ -55,3 +55,5 @@ function doOperation(a, b, op) {
 
 const operation = doOperation(1, 2, add);
 console.log(operation);
+
+
