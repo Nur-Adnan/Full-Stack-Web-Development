@@ -1,3 +1,8 @@
+const fs = require("fs");
+
+const content = fs.readFileSync("a.txt", "utf-8");
+console.log(content);
+
 // find the sum from 1 to a number
 
 function sum(n) {
@@ -10,3 +15,28 @@ function sum(n) {
 
 const ans = sum(10);
 console.log(ans);
+
+// callback function
+
+function add(a, b) {
+  return a + b;
+}
+
+function sub(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function doOperation(a, b, op) {
+  return op(a, b);
+}
+
+const operation = doOperation(1, 2, add);
+console.log(operation);
