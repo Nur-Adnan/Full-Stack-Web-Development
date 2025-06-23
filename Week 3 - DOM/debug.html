@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Todo - Add and Delete</title>
+  </head>
+  <body id="todos">
+    <input id="input" type="text" placeholder="Add Todo Here" />
+    <button onclick="addTodo()">Add Todo</button>
+
+    <script>
+      let count = 1;
+
+      function addTodo() {
+        const addEl = document.getElementById("input");
+        const addValue = addEl.value;
+
+        const parentEl = document.getElementById("todos");
+        const newDiv = document.createElement("div");
+
+        newDiv.setAttribute("id", `todo-${count}`);
+        newDiv.innerHTML = `
+          <span>${count} ${addValue}</span>
+          <button onclick="deleteTodo('todo-${count}')">Delete</button>
+        `;
+        count++;
+
+        parentEl.appendChild(newDiv);
+        addEl.value = "";
+      }
+
+      function deleteTodo(id) {
+        const el = document.getElementById(id);
+        const parentEl = document.getElementById("todos");
+        parentEl.removeChild(el);
+      }
+    </script>
+  </body>
+</html>
