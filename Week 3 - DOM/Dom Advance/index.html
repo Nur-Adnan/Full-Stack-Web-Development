@@ -1,14 +1,20 @@
-<!-- 
-    <body>
-    <input type="text" placeholder="Add Todo" />
-    <button onclick="addTodo()">Add Todo !</button>
-    </body>
-    <script>
-    function addTodo() {
-        const value = document.querySelector("input").value;
-        const newElement = document.createElement("div");
-        newElement.innerHTML = value;
-        document.querySelector("body").appendChild(newElement);
-    }
-    </script>
--->
+<body>
+  <input type="text" placeholder="Add Todo" />
+  <button onclick="addTodo()">Add Todo !</button>
+</body>
+<script>
+  function addTodo() {
+    const value = document.querySelector("input").value;
+    const spanEl = document.createElement("span");
+    const deletebtn = document.createElement("button");
+
+    spanEl.innerHTML = value;
+    deletebtn.innerHTML = "Delete";
+
+    const newElement = document.createElement("div");
+    newElement.appendChild(spanEl);
+    newElement.appendChild(deletebtn);
+
+    document.querySelector("body").appendChild(newElement);
+  }
+</script>
