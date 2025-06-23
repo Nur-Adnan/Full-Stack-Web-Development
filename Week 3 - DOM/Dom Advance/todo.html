@@ -1,8 +1,8 @@
 <body>
   <input type="text" placeholder="Add Todo . . . " />
   <button onclick="addTodo()">Add Todo !</button>
-  <button>Delete last todo</button>
-  <button>Delete first todo</button>
+  <button onclick="deleteLastTodo()">Delete last todo</button>
+  <button onclick="deletefirstTodo()">Delete first todo</button>
   <div id="todos"></div>
   <script>
     let todos = [];
@@ -10,6 +10,16 @@
       todos.push({
         title: document.querySelector("input").value,
       });
+      render();
+    }
+
+    function deleteLastTodo() {
+      todos.splice(todos.length - 1, 1);
+      render();
+    }
+
+    function deletefirstTodo() {
+      todos.splice(0, 1);
       render();
     }
 
